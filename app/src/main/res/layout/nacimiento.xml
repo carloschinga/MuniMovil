@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/nacimientoCard">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="?selectableItemBackground"
+        android:paddingTop="@dimen/card_padding_vertical"
+        android:paddingBottom="@dimen/card_padding_vertical_large"
+        android:paddingLeft="@dimen/card_padding_lateral"
+        android:paddingRight="@dimen/card_padding_lateral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/nombre_nacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fecha_nacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/indigo700"
+            android:paddingBottom="@dimen/card_padding_vertical" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

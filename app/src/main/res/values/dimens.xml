@@ -1,0 +1,29 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_text_primary_title">@dimen/text_xLarge</dimen>
+    <dimen name="card_text_primary_title_medium">19sp</dimen>
+    <dimen name="card_text_primary_title_small">@dimen/text_small</dimen>
+    <dimen name="card_text_primary_subtitle">@dimen/text_small</dimen>
+    <dimen name="card_text_supporting">@dimen/text_small</dimen>
+    <dimen name="card_text_supporting_large">@dimen/text_medium</dimen>
+    <dimen name="card_padding_lateral">16dp</dimen>
+    <dimen name="card_padding_vertical">16dp</dimen>
+    <dimen name="card_padding_vertical_large">24dp</dimen>
+    <dimen name="card_padding_actions">8dp</dimen>
+    <dimen name="card_padding_actions_vertical_layout">4dp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_xLarge">24sp</dimen>
+    <dimen name="flashcard_min_height">156dp</dimen>
+    <dimen name="flashcard_question_size">22.5sp</dimen>
+    <dimen name="flashcard_answer_size">19sp</dimen>
+
+    <integer name="columns">1</integer>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_nacimiento_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pe.gob.munihuacho.munimovil.activities.NacimientoDetailActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/apepaterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtrazon"
+                android:id="@+id/textView63"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtAnswer"
+                android:id="@+id/tvPaternoNacimiento" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/apematerno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtrazon"
+                android:layout_weight="1"
+                android:id="@+id/textView65" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtAnswer"
+                android:id="@+id/tvMaternoNacimiento" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtrazon"
+                android:layout_weight="1"
+                android:id="@+id/textView67" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtAnswer"
+                android:id="@+id/tvNombresNacimiento" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/fecha_nacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtrazon"
+                android:layout_weight="1"
+                android:id="@+id/textView71" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtAnswer"
+                android:id="@+id/tvNacimiento" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/inscripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtrazon"
+                android:layout_weight="1"
+                android:id="@+id/textView73" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/muni.forms.txtAnswer"
+                android:id="@+id/tvInscripcionNacimiento" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <TextView
+            android:text="@string/sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/muni.forms.txtrazon"
+            android:layout_weight="1"
+            android:id="@+id/textView75" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/muni.forms.txtAnswer"
+            android:id="@+id/tvSexoNacimiento" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"></LinearLayout>
+</LinearLayout>

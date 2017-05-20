@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">Muni Movil</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_exit">Salir</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="visitante">Visitante</string>
+    <string name="usuario">Usuario</string>
+    <string name="contra">Contraseña</string>
+    <string name="textoBienvenido">
+       Vecinos de esta querida tierra llena de historia, cultura y tradiciones, permítanme darles la bienvenidas a nombre mío y del Cuerpo Edil, elegidos democráticamente para el periodo 2015 – 2018, quienes hemos asumido con gran responsabilidad el compromiso de ejercer un gobierno comunal para todos.
+    </string>
+    <string name="action_home">Inicio</string>
+    <string name="action_back" />
+    <string name="RegistroCivil">Registro Civil</string>
+    <string name="CajaCentral">Caja Central</string>
+    <string name="color">Color</string>
+    <string name="idioma">Idioma</string>
+    <string name="Configuraciones">Configuraciones</string>
+    <string name="btnRCConsulta">Consulta de registro y estado civil</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="consultarPago">Consulta de pagos</string>
+    <string name="IngreseCodigo">Ingrese Codigo...</string>
+    <string name="Buscar">Buscar</string>
+    <string name="muniHuaura" translatable="false">Municipalidad Provincial de Huaura</string>
+    <string name="gerenciaAdm" translatable="false">Gerencia de Administracion Tributaria</string>
+    <string name="ruc" translatable="false">RUC.20141418557 DIRECCION. CALLE COLON N°150-HUACHO</string>
+    <string name="GAT" translatable="false">GAT</string>
+    <string name="cajero">Cajero</string>
+    <string name="fecha">Fecha</string>
+    <string name="ingreseRecibo">Ingrese N° Recibo</string>
+    <string name="consultar">Consultar</string>
+    <string name="nomyape">Nombres y Apellidos</string>
+    <string name="tipoPartida">Tipo de Partida</string>
+    <string name="ubicFolio">Ubicacion de Folio</string>
+    <string name="Importe">Importe</string>
+    <string name="anoRegistro">Año de Registro:</string>
+    <string name="totalAPagar">Total A Pagar</string>
+    <string name="ctaCte">Cuenta Corriente</string>
+    <string name="ctaComun">Cuenta Ahorro</string>
+    <string name="backButton">Atras</string>
+    <string name="mvmiento">N° de Movimiento</string>
+    <string name="ingreseCajero">Ingrese número cajero</string>
+    <string name="tributo">Tributo</string>
+    <string name="contribuyente">Contribuyente</string>
+    <string name="mov">Mov</string>
+    <string name="nombre">Nombre</string>
+    <string name="TolDeuda">Tol. Deuda</string>
+    <string name="TolEmision">Tol. Emisión</string>
+    <string name="TolMoReIn">Tol. Mo+Re+In</string>
+    <string name="obs">Observación</string>
+    <string name="Liq">Liq.</string>
+    <string name="total">Total</string>
+    <string name="Concepto">Concepto</string>
+    <string name="home">Inicio</string>
+    <string name="ingrNombre">Ingrese Nombre...</string>
+    <string name="regyestcivil">Consulta de registro y estado civil</string>
+    <string name="apepaterno">Apellido Paterno</string>
+    <string name="apematerno">Apellido Materno</string>
+    <string name="nombres">Nombres</string>
+    <string name="sex">Sexo</string>
+    <string name="fechaDefunc">Defuncion</string>
+    <string name="fechainscripcion">Fech. inscripción</string>
+    <string name="escojeOpcion">Escoje una Opción</string>
+    <string name="ingNumeroPlacaPadron">Ingrese N° placa o N° Padrón</string>
+    <string name="placa">Placa</string>
+    <string name="padron">Padrón</string>
+    <string name="certOperacion">Cert. de Operación</string>
+    <string name="dni">Dni</string>
+    <string name="apell">Apellidos</string>
+    <string name="empre">Empresa</string>
+    <string name="servi">Servicio</string>
+    <string name="clase">Clase</string>
+    <string name="motor">Motor</string>
+    <string name="serie">Serie</string>
+    <string name="fechaEmision">Fecha de Emisión</string>
+    <string name="fechaCaducidad">Fecha de Caducidad</string>
+    <string name="operVehiculo">Consulta de operación vehicular</string>
+    <string name="papeletas">Consulta de papeletas</string>
+    <string name="ingPapeletas">Ingrese el DNI o N° de papeleta</string>
+    <string name="ingOperacionVehiculo">Ingrese operación vehiculo</string>
+    <string name="ingresedato">Ingrese dato...</string>
+    <string name="title_activity_papeletas">PapeletasActivity</string>
+    <string name="title_activity_registro_civil">RegistroCivilActivity</string>
+    <string name="title_activity_caja_central">CajaCentralActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="selecopcion">Seleccione una opcion...</string>
+    <string name="ingNombre">Ingrese Nombre...</string>
+    <string name="ingPaterno">Ap. Paterno...</string>
+    <string name="ingMaterno">Ap. Materno...</string>
+    <string name="paterno">Apellido Paterno</string>
+    <string name="materno">Apellido Materno</string>
+    <string name="action_screenshot">screenshot</string>
+    <string name="prediosarbitrios">Predios y arbitrios</string>
+    <string name="forjandodesarrollo">Forjando desarrollo</string>
+    <string name="tramitesdocumentarios">Tramites documentarios</string>
+    <string name="title_activity_registro_estado_civil">RegistroEstadoCivilActivity</string>
+    <string name="splashtitletxt">Bienvenidos a la Municipalidad Provincial de Huaura</string>
+    <string name="conspapeletas">Consulta de papeletas de transito</string>
+    <string name="consregyestaci">Consulta de registro y estado civil</string>
+    <string name="fechaInfranccion">Fech. infracción</string>
+    <string name="numPapeletas">Num. papeleta</string>
+    <string name="tipoInfraccion">Tipo infracción</string>
+    <string name="monto">Monto</string>
+    <string name="estado">Estado</string>
+    <string name="fecha_nacimiento">Nacimiento</string>
+    <string name="inscripcion">Inscripción</string>
+    <string name="esposo">Esposo</string>
+    <string name="esposa">Esposa</string>
+    <string name="fechaMatrimonio">Fech. Matrimonio </string>
+</resources>

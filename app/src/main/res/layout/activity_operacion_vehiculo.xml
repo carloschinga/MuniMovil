@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_operacion_vehiculo"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="pe.gob.munihuacho.munimovil.activities.OperacionVehiculoActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/placa"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView"
+                    android:textStyle="normal|bold"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvPlacaOV"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/padron"
+                    android:layout_width="match_parent"
+                    android:id="@+id/textView15"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvPadronOV" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/certOperacion"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView21"
+                    android:scrollHorizontally="false"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvCertiOperOV"
+                    android:autoText="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/dni"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView25" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/tvDniOV"
+                    style="@style/muni.operacionvehiculo.txtAnswer" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/nombre"
+                android:layout_width="match_parent"
+                style="@style/muni.operacionvehiculo.txtRazon"
+                android:id="@+id/textView27" />
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/muni.operacionvehiculo.txtAnswer"
+                android:id="@+id/tvNombreOv" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/empre"
+                android:layout_width="match_parent"
+                style="@style/muni.operacionvehiculo.txtRazon"
+                android:id="@+id/textView29" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        style="@style/muni.operacionvehiculo.txtAnswer"
+                        android:id="@+id/tvEmpresaOV"
+                        android:lines="1"
+                        android:fontFamily="sans-serif"
+                        android:scrollHorizontally="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/servi"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView31" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvServicioOV" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/clase"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView33" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvClaseOV" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/motor"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView35" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvMotorOV" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/serie"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView37" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvSerieOV" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/color"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView41" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvColorOV" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/fechaEmision"
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView43" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvFechaEmisionOV" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/fechaCaducidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/muni.operacionvehiculo.txtRazon"
+                    android:id="@+id/textView45" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/muni.operacionvehiculo.txtAnswer"
+                    android:id="@+id/tvFechaCaducidadOV" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/edit_text_rounded_corners"
+        android:paddingTop="@dimen/card_padding_vertical"
+        android:paddingBottom="@dimen/card_padding_vertical_large"
+        android:paddingLeft="@dimen/card_padding_lateral"
+        android:paddingRight="@dimen/card_padding_lateral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/Concepto"
+                android:layout_width="match_parent"
+                style="@style/muni.forms.txtrazon"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView18" />
+
+            <TextView
+                android:text="ALGUN TEXTO EN MAYUSCULA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/concepto"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/Importe"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22"
+                style="@style/muni.forms.txtrazon"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical" />
+
+            <TextView
+                android:text="S./0.50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/importe"
+                android:layout_weight="3" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
