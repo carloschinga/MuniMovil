@@ -21,6 +21,7 @@ public class NacimientoDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nacimiento_detail);
         naci=getIntent().getParcelableExtra(DETALLE_NACIMIENTO);
+        setTitle("Detalle de Nacimiento");
         if(naci==null){
             throw  new  NullPointerException("Array list received is null");
         }
@@ -36,5 +37,6 @@ public class NacimientoDetailActivity extends AppCompatActivity {
         tvNombresNacimiento.setText(naci.getNombres());
         tvInscripcionNacimiento.setText(naci.getFecha_inscripcion());
         tvSexoNacimiento.setText(naci.getSexo());
+        tvNacimiento.setText(naci.getFechanac());
     }
 }

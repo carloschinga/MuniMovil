@@ -2,6 +2,7 @@ package pe.gob.munihuacho.munimovil.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,32 +12,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import pe.gob.munihuacho.munimovil.R;
 import pe.gob.munihuacho.munimovil.adapters.CtaNoCteAdapter;
+import pe.gob.munihuacho.munimovil.model.CajaCentral;
 
 public class CcCtaAhorroActivity extends AppCompatActivity {
     //keys for Cuenta Corriente
-    String tributo="tributo";
-    String contribuyente="contribuyente";
-    String movimiento="movimiento";
-    String nombre="nombre";
-    String deuda="deuda";
-    String emision="emision";
-    String morein="morein";
-    String periodo="periodo";
-    String total="total";
-    String hora="hora";
-    String usuario="usuario";
-    String fecha="fecha";
-    String caja="caja";
-    ArrayList<String> importe;
-    ArrayList<String> concepto;
-    //keys for Cuenta no corriente (ahorro)
-    String listaConc="listaConcepto";
-    String listaImp="listaImporte";
-    String liquidacion="liquidacion";
-    String observacion="observacion";
+    ArrayList<CajaCentral> list;
+    String listakey="cajacentral";
     TextView tvLiqCtaNoCte,
             tvMovCtaNoCte,
             tvCajeroCtaNoCte,
@@ -46,27 +31,26 @@ public class CcCtaAhorroActivity extends AppCompatActivity {
             tvUserCtaNoCte,
             tvFechaCtaNoCte,
             tvHoraCtaNoCte;
-
+    String liq="";
+    String mov="";
+    String caj="";
+    String nom="";
+    String obs="";
+    String tot="";
+    String usu="";
+    String fec="";
+    String hor="";
+    RecyclerView RvCtaNoCte;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cc_cta_ahorro);
         setTitle("Cuenta No Corriente");
-        String liq=getIntent().getStringExtra(liquidacion);
-        String mov=getIntent().getStringExtra(movimiento);
-        String caj=getIntent().getStringExtra(caja);
-        String nom=getIntent().getStringExtra(nombre);
-        String obs=getIntent().getStringExtra(observacion);
-        importe=getIntent().getStringArrayListExtra(listaImp);
-        concepto=getIntent().getStringArrayListExtra(listaConc);
-        if(importe.size()==0){
+        list=getIntent().getParcelableArrayListExtra(listakey);
+        if(list.size()==0){
             return;
         }
-        String usu=getIntent().getStringExtra(usuario);
-        String fec=getIntent().getStringExtra(fecha);
-        String hor=getIntent().getStringExtra(hora);
-        String tot=getIntent().getStringExtra(total);
-        tvLiqCtaNoCte=(TextView)findViewById(R.id.tvLiqCtaNoCte);
+                tvLiqCtaNoCte=(TextView)findViewById(R.id.tvLiqCtaNoCte);
                 tvMovCtaNoCte=(TextView)findViewById(R.id.tvMovCtaNoCte);
                 tvCajeroCtaNoCte=(TextView)findViewById(R.id.tvCajeroCtaNoCte);
                 tvNombreCtaNoCte=(TextView)findViewById(R.id.tvNombreCtaNoCte);
@@ -75,9 +59,24 @@ public class CcCtaAhorroActivity extends AppCompatActivity {
                 tvUserCtaNoCte=(TextView)findViewById(R.id.tvUserCtaNoCte);
                 tvFechaCtaNoCte=(TextView)findViewById(R.id.tvFechaCtaNoCte);
                 tvHoraCtaNoCte=(TextView)findViewById(R.id.tvHoraCtaNoCte);
-
-
-        tvLiqCtaNoCte.setText(liq);
+                RvCtaNoCte=(RecyclerView)findViewById(R.id.RvCtaNoCte);
+        RvCtaNoCte.setLayoutManager(new LinearLayoutManager(this));
+            for(Iterator it=list.iterator();it.hasNext();){
+                Object obj=it.next();
+                CajaCentral cj=(CajaCentral)obj;
+                liq=cj.getLiq().trim();
+                caj=cj.getCaja().trim();
+                mov=cj.getMovimiento().trim();
+                nom=cj.getNombre().trim();
+                obs=cj.getObservacion().trim();
+                tot=cj.getTotal().trim();
+                usu=cj.getUsuario().trim();
+                fec=cj.getFecha().trim();
+                hor=cj.getHora().trim();
+            }
+            CtaNoCteAdapter adapter=new CtaNoCteAdapter(this,list);
+                RvCtaNoCte.setAdapter(adapter);
+                tvLiqCtaNoCte.setText(liq);
                 tvMovCtaNoCte.setText(mov);
                 tvCajeroCtaNoCte.setText(caj);
                 tvNombreCtaNoCte.setText(nom);
@@ -86,11 +85,6 @@ public class CcCtaAhorroActivity extends AppCompatActivity {
                 tvUserCtaNoCte.setText(usu);
                 tvFechaCtaNoCte.setText(fec);
                 tvHoraCtaNoCte.setText(hor);
-
-
-
-
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

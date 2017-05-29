@@ -1,10 +1,13 @@
 package pe.gob.munihuacho.munimovil.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by peral on 29/03/2017.
  */
 
-public class CajaCentral {
+public class CajaCentral implements Parcelable{
     public String movimiento;
     public String caja;
     public String liq;
@@ -20,30 +23,32 @@ public class CajaCentral {
     public CajaCentral(){
 
     }
-
-    public CajaCentral(String movimiento,
-                       String caja,
-                       String liq,
-                       String nombre,
-                       String observacion,
-                       String concepto,
-                       String importe,
-                       String total,
-                       String usuario,
-                       String fecha,
-                       String hora) {
-        this.movimiento = movimiento;
-        this.caja = caja;
-        this.liq = liq;
-        this.nombre = nombre;
-        this.observacion = observacion;
-        this.concepto = concepto;
-        this.importe = importe;
-        this.total = total;
-        this.usuario = usuario;
-        this.fecha = fecha;
-        this.hora = hora;
+    protected CajaCentral(Parcel in) {
+        movimiento = in.readString();
+        caja = in.readString();
+        liq = in.readString();
+        nombre = in.readString();
+        observacion = in.readString();
+        concepto = in.readString();
+        importe = in.readString();
+        total = in.readString();
+        usuario = in.readString();
+        fecha = in.readString();
+        hora = in.readString();
     }
+
+
+    public static final Creator<CajaCentral> CREATOR = new Creator<CajaCentral>() {
+        @Override
+        public CajaCentral createFromParcel(Parcel in) {
+            return new CajaCentral(in);
+        }
+
+        @Override
+        public CajaCentral[] newArray(int size) {
+            return new CajaCentral[size];
+        }
+    };
 
     public String getMovimiento() {
         return movimiento;
@@ -131,5 +136,25 @@ public class CajaCentral {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(movimiento);
+        dest.writeString(caja);
+        dest.writeString(liq);
+        dest.writeString(nombre);
+        dest.writeString(observacion);
+        dest.writeString(concepto);
+        dest.writeString(importe);
+        dest.writeString(total);
+        dest.writeString(usuario);
+        dest.writeString(fecha);
+        dest.writeString(hora);
     }
 }

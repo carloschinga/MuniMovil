@@ -76,6 +76,7 @@ public class ConsultarPagoFragment extends Fragment {
     String usuario="usuario";
     String fecha="fecha";
     String caja="caja";
+    String listakey="cajacentral";
     String observacion="observacion";
     //keys for Cuenta no corriente (ahorro)
     String listaConc="listaConcepto";
@@ -156,10 +157,16 @@ public class ConsultarPagoFragment extends Fragment {
         numMovimiento=(EditText)view.findViewById(R.id.numMovimiento);
         final Caracteres hacer=new Caracteres();
         tvCajeroCC=(EditText)view.findViewById(R.id.tvCajeroCC);
+        final String[] paramfecha = {""};
+        final String[] parammovi = {""};
+        final String[] paramcaja={""};
         btnConsultaCc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(input_fecha.getText().toString().trim().isEmpty()){
+                paramfecha[0]=input_fecha.getText().toString().trim();
+                parammovi[0]=numMovimiento.getText().toString().trim();
+                paramcaja[0]=tvCajeroCC.getText().toString().trim();
+                if(paramfecha[0].isEmpty()){
                     Toast.makeText(getActivity(), "Ingresa una fecha", Toast.LENGTH_SHORT).show();
                 }else if(numMovimiento.getText().toString().trim().isEmpty()){
                     Toast.makeText(getActivity(), "Ingresa número de movimiento", Toast.LENGTH_SHORT).show();
@@ -170,9 +177,9 @@ public class ConsultarPagoFragment extends Fragment {
                     Toast.makeText(getActivity(), "Ingresa cajero valido", Toast.LENGTH_SHORT).show();
                 }else{
                     //handle soap action
-                    new SoapAction(getActivity()).execute(input_fecha.getText().toString(),
-                            numMovimiento.getText().toString().trim(),
-                            tvCajeroCC.getText().toString());
+                    new SoapAction(getActivity()).execute(paramfecha[0],
+                            parammovi[0],
+                            paramcaja[0]);
                 }
             }
         });
@@ -293,9 +300,8 @@ public class ConsultarPagoFragment extends Fragment {
         static final String NAMESPACE="http://consultar/";
         String METHODNAME="";
         CajaCentralCc cajaCentralCc=new CajaCentralCc();
-        CajaCentral cajaCentral=new CajaCentral();
-        ArrayList<String> listaImporte=new ArrayList<String>();
-        ArrayList<String> listaConcepto=new ArrayList<String>();
+        CajaCentral cajaCentral;
+        ArrayList<CajaCentral> listaCajaCentral=new ArrayList<CajaCentral>();
         String notFoundMessage="";
         String notEthernetConnection="";
         protected SoapAction(Activity activity) {
@@ -354,6 +360,7 @@ public class ConsultarPagoFragment extends Fragment {
                         if(obj1.getPropertyCount()>0){
                         for (int i=0;i<obj1.getPropertyCount();i++){
                             SoapObject obj2=(SoapObject)obj1.getProperty(i);
+                            cajaCentral=new CajaCentral();
                             cajaCentral.setNombre(obj2.getProperty("nombre").toString());
                             cajaCentral.setMovimiento(obj2.getProperty("movimiento").toString());
                             cajaCentral.setLiq(obj2.getProperty("liq").toString());
@@ -363,8 +370,9 @@ public class ConsultarPagoFragment extends Fragment {
                             cajaCentral.setFecha(obj2.getProperty("fecha").toString());
                             cajaCentral.setTotal(obj2.getProperty("total").toString());
                             cajaCentral.setObservacion(obj2.getProperty("observacion").toString());
-                            listaConcepto.add(obj2.getProperty("concepto").toString());
-                            listaImporte.add(obj2.getProperty("importe").toString());
+                            cajaCentral.setConcepto(obj2.getProperty("concepto").toString());
+                            cajaCentral.setImporte(obj2.getProperty("importe").toString());
+                            listaCajaCentral.add(cajaCentral);
                         }
                         }else{
                             notFoundMessage="Verifica los datos y vuelve a intentarlo.";
@@ -395,6 +403,8 @@ public class ConsultarPagoFragment extends Fragment {
                    super.onPostExecute(children);
                    //handle caja central cc intent
                    if(!cajaCentralCc.getTributo().equals(null)){
+                       return;
+                   }
                    Intent intent = new Intent(getActivity(), CcCtaCteActivity.class);
                    intent.putExtra("tributo", cajaCentralCc.getTributo());
                    intent.putExtra(contribuyente, cajaCentralCc.getContribuyente());
@@ -410,30 +420,20 @@ public class ConsultarPagoFragment extends Fragment {
                    intent.putExtra(usuario, cajaCentralCc.getUsuario());
                    intent.putExtra(caja, cajaCentralCc.getCaja());
                    startActivity(intent);
-                   }
                }
                 if (METHODNAME.equals("ConsultarCajaCentral")) {
 
-                    if(!cajaCentral.getCaja().equals(null)){
+                    if(listaCajaCentral.size()!=0){
                         super.onPostExecute(children);
                    Intent intent = new Intent(getActivity(), CcCtaAhorroActivity.class);
-                   intent.putExtra(caja, cajaCentral.getCaja());
-                   intent.putExtra(liquidacion, cajaCentral.getLiq());
-                   intent.putExtra(nombre, cajaCentral.getNombre());
-                   intent.putExtra(usuario, cajaCentral.getUsuario());
-                   intent.putExtra(movimiento,cajaCentral.getMovimiento());
-                   intent.putExtra(hora, cajaCentral.getHora());
-                   intent.putExtra(fecha, cajaCentral.getFecha());
-                   intent.putExtra(total, cajaCentral.getTotal());
-                        intent.putExtra(observacion,cajaCentral.getObservacion());
-                   intent.putStringArrayListExtra(listaConc, listaConcepto);
-                   intent.putStringArrayListExtra(listaImp, listaImporte);
+                   intent.putExtra(listakey, listaCajaCentral);
                    startActivity(intent);
                     }else{
                         super.onPostExecute(children);
                     }
-               }
+                }
+            }
            }
         }
-    }
 }
+

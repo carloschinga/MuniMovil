@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import pe.gob.munihuacho.munimovil.R;
+import pe.gob.munihuacho.munimovil.model.CajaCentral;
 import pe.gob.munihuacho.munimovil.model.Defuncion;
 import pe.gob.munihuacho.munimovil.model.Nacimiento;
 
@@ -39,13 +40,11 @@ public class CtaNoCteAdapter extends RecyclerView.Adapter<CtaNoCteAdapter.CtaNoC
             }
         }
     }
-    private ArrayList<String> mConcepto;
-    private  ArrayList<String> mImporte;
+  private ArrayList<CajaCentral> cajaCentralArrayList;
     private Context mContext;
-    public CtaNoCteAdapter(Context context,ArrayList<String> concepto,ArrayList<String> importe){
+    public CtaNoCteAdapter(Context context,ArrayList<CajaCentral> list){
         mContext=context;
-        mConcepto=concepto;
-        mImporte=importe;
+       cajaCentralArrayList=list;
     }
     @Override
     public CtaNoCteAdapter.CtaNoCteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -55,8 +54,9 @@ public class CtaNoCteAdapter extends RecyclerView.Adapter<CtaNoCteAdapter.CtaNoC
 
     @Override
     public void onBindViewHolder(CtaNoCteAdapter.CtaNoCteViewHolder holder, int position) {
-        String xConcepto=mConcepto.get(position);
-        String xImporte=mImporte.get(position);
+        CajaCentral caja=cajaCentralArrayList.get(position);
+        String xConcepto=caja.getConcepto().trim();
+        String xImporte=caja.getImporte().trim();
         holder.text1.setText(xConcepto);
         holder.text2.setText(xImporte);
 
@@ -64,7 +64,7 @@ public class CtaNoCteAdapter extends RecyclerView.Adapter<CtaNoCteAdapter.CtaNoC
 
     @Override
     public int getItemCount() {
-        return mConcepto.size();
+        return cajaCentralArrayList.size();
     }
 
     @Override

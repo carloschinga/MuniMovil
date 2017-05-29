@@ -57,7 +57,7 @@ public  class DefuncionViewHolder extends RecyclerView.ViewHolder implements  Vi
         String nombreDifunto=defuncion.getPaterno().trim()+" "+defuncion.getMaterno().trim()+" "+defuncion.getNombres().trim();
         String fechaDifunsion=defuncion.getFechadef().trim();
         holder.text1.setText(nombreDifunto);
-        holder.text2.setText(fechaDifunsion);
+        holder.text2.setText("Fecha de defunción: "+fechaDifunsion);
     }
 
     @Override

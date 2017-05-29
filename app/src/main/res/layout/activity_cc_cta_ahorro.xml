@@ -101,10 +101,24 @@
                     android:id="@+id/textView39"
                     android:layout_weight="1" />
 
-                <TextView
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    style="@style/muni.forms.txtAnswer"
-                    android:id="@+id/tvNombreCtaNoCte" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNombreCtaNoCte"
+                            style="@style/muni.forms.txtAnswer"
+                            android:layout_width="match_parent" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
             </LinearLayout>
 
             <LinearLayout

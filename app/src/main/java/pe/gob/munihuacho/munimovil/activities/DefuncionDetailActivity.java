@@ -2,7 +2,11 @@ package pe.gob.munihuacho.munimovil.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pe.gob.munihuacho.munimovil.R;
 import pe.gob.munihuacho.munimovil.model.Defuncion;
@@ -21,6 +25,7 @@ public class DefuncionDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_defuncion_detail);
+        setTitle("Detalle de Defunción");
         difu=getIntent().getParcelableExtra(DETALLE_DEFUNCION);
         if(difu==null){
             throw  new  NullPointerException("Array list received is null");
@@ -37,5 +42,28 @@ public class DefuncionDetailActivity extends AppCompatActivity {
         tvNombresDefuncion.setText(difu.getNombres());
         tvInscripcionDefuncion.setText(difu.getFecha());
         tvSexoDefuncion.setText(difu.getSexo());
+        tvDefuncion.setText(difu.getFechadef());
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_child_activitys, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.action_back){
+            if(getSupportFragmentManager().getBackStackEntryCount() > 1) {
+                getSupportFragmentManager().popBackStack();
+            }else{
+                super.onBackPressed();
+            }
+        }
+        if(id==R.id.action_screenshot){
+            Toast.makeText(this, "Proximamente...!", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

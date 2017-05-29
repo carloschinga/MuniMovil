@@ -5,38 +5,47 @@
     android:id="@+id/matrimonioCard">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
-        android:paddingTop="@dimen/card_padding_vertical"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/card_padding_vertical_large"
         android:paddingLeft="@dimen/card_padding_lateral"
         android:paddingRight="@dimen/card_padding_lateral"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:paddingTop="@dimen/card_padding_vertical">
 
         <TextView
-            android:text="Esposa:"
+            android:id="@+id/textView62"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView62"
+            android:text="Esposa:"
             android:textStyle="normal|bold" />
 
         <TextView
             android:id="@+id/nombre_esposo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <TextView
-            android:text="Esposo:"
+            android:id="@+id/textView68"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView68"
+            android:text="Esposo:"
             android:textStyle="normal|bold" />
 
         <TextView
             android:id="@+id/nombre_esposa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/card_padding_vertical" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <view
+        android:id="@+id/view4"
+        class="android.support.v7.widget.LinearLayoutCompat"
+        id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_gravity="bottom"
+        android:background="#303F9F" />
+
 </android.support.v7.widget.CardView>

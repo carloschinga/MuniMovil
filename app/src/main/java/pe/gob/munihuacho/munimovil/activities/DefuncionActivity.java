@@ -37,7 +37,7 @@ public class DefuncionActivity extends AppCompatActivity {
         adapter.setOnEntryClickListener(new DefuncionAdapter.OnEntryClickListener() {
             @Override
             public void onEntryClick(View view, int position) {
-                Intent intent=new Intent(DefuncionActivity.this,NacimientoDetailActivity.class);
+                Intent intent=new Intent(DefuncionActivity.this,DefuncionDetailActivity.class);
                 intent.putExtra(DefuncionDetailActivity.DETALLE_DEFUNCION,difuntos.get(position));
                 startActivity(intent);
             }

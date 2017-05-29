@@ -100,7 +100,7 @@
     <string name="title_activity_registro_civil">RegistroCivilActivity</string>
     <string name="title_activity_caja_central">CajaCentralActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="selecopcion">Seleccione una opcion...</string>
+    <string name="selecopcion">Seleccione tipo de partida...</string>
     <string name="ingNombre">Ingrese Nombre...</string>
     <string name="ingPaterno">Ap. Paterno...</string>
     <string name="ingMaterno">Ap. Materno...</string>
