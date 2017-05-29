@@ -6,7 +6,6 @@
  * Se ha desarrollado de tal forma que pueda ser usada por cualquier version de android desde la API 11 (Android 3.0 HoneyComb)
  * El ide que se esta usando para el desarrollo de la app es Android Studio 2.2.3 
  * El ide que se esta usando para el desarrollo del servicio web es Netbeans
- 
  ##
  © 2015 - Municipalidad Provincial de Huaura  
  Calle Colon 150 - Plaza de Armas de Huacho  
@@ -16,6 +15,6 @@
 Sábados(Solo pagos de tributos) - 9.00 am -1.00 pm  
 
 ##
-Contactame para consultas +51986064775
+Soy el unico responsable del desarrollo y mantenimiento de la aplicación 
  
  
