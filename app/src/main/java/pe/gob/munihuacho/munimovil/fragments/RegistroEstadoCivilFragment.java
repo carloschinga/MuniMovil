@@ -113,7 +113,7 @@ public class RegistroEstadoCivilFragment extends Fragment {
                 String nombre=input_nombreReC.getText().toString().trim();
                 if(input_paternoReC.getText().toString().trim().isEmpty()&&input_maternoReC.getText().toString().trim().isEmpty()&&input_nombreReC.getText().toString().trim().isEmpty()){
                     Toast.makeText(getActivity(), "Debe Ingresar un dato de busqueda", Toast.LENGTH_SHORT).show();
-                }else if(selectedItem.equals("Seleccione una opcion...")){
+                }else if(selectedItem.equals("Seleccione tipo de partida...")){
                     Toast.makeText(getActivity(), "Por favor selecciona una opción", Toast.LENGTH_SHORT).show();
                 }else{
                     if (selectedItem.equals("Nacimiento")){

@@ -1,10 +1,13 @@
 package pe.gob.munihuacho.munimovil.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by peral on 29/03/2017.
  */
 
-public class Caja {
+public class Caja implements Parcelable {
     String id;
     public String libro;
     public String partidanro;
@@ -29,6 +32,40 @@ public class Caja {
 
     }
 
+
+    protected Caja(Parcel in) {
+        id = in.readString();
+        libro = in.readString();
+        partidanro = in.readString();
+        añore = in.readString();
+        folio = in.readString();
+        paterno = in.readString();
+        materno = in.readString();
+        nombres = in.readString();
+        tipo = in.readString();
+        importe = in.readString();
+        cantidad = in.readString();
+        total = in.readString();
+        usuario = in.readString();
+        fecha = in.readString();
+        situacion = in.readString();
+        obs = in.readString();
+        solicitante = in.readString();
+        formato = in.readString();
+        entidad = in.readString();
+    }
+
+    public static final Creator<Caja> CREATOR = new Creator<Caja>() {
+        @Override
+        public Caja createFromParcel(Parcel in) {
+            return new Caja(in);
+        }
+
+        @Override
+        public Caja[] newArray(int size) {
+            return new Caja[size];
+        }
+    };
 
     public String getId() {
         return id;
@@ -180,5 +217,33 @@ public class Caja {
 
     public void setEntidad(String entidad) {
         this.entidad = entidad;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(libro);
+        dest.writeString(partidanro);
+        dest.writeString(añore);
+        dest.writeString(folio);
+        dest.writeString(paterno);
+        dest.writeString(materno);
+        dest.writeString(nombres);
+        dest.writeString(tipo);
+        dest.writeString(importe);
+        dest.writeString(cantidad);
+        dest.writeString(total);
+        dest.writeString(usuario);
+        dest.writeString(fecha);
+        dest.writeString(situacion);
+        dest.writeString(obs);
+        dest.writeString(solicitante);
+        dest.writeString(formato);
+        dest.writeString(entidad);
     }
 }

@@ -27,7 +27,7 @@ public class DefuncionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_defuncion);
         difuntos=getIntent().getParcelableArrayListExtra("muertos");
         rvDefuncion=(RecyclerView)findViewById(R.id.RvDefuncion);
-        setTitle("Defunciones");
+        setTitle("Resultado de Defunciones");
         rvDefuncion.setLayoutManager(new LinearLayoutManager(this));
         if(difuntos.size()==0){
             return;

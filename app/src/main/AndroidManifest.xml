@@ -43,7 +43,8 @@
         <activity android:name=".activities.MatrimonioActivity" />
         <activity android:name=".activities.MatrimonioDetailActivity" />
         <activity android:name=".activities.DefuncionActivity" />
-        <activity android:name=".activities.DefuncionDetailActivity"></activity>
+        <activity android:name=".activities.DefuncionDetailActivity" />
+        <activity android:name=".activities.CuentaCorrienteActivity"></activity>
     </application>
 
 </manifest>

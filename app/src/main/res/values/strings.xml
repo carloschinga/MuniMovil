@@ -124,4 +124,7 @@
     <string name="esposo">Esposo</string>
     <string name="esposa">Esposa</string>
     <string name="fechaMatrimonio">Fech. Matrimonio </string>
+    <string name="codigo">Codigo</string>
+    <string name="direcc">Dirección</string>
+    <string name="verestadocontvs">Ver estado del contribuyente vs coactiva</string>
 </resources>

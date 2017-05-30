@@ -26,7 +26,7 @@ public class MatrimonioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_matrimonio);
         matrimonios=getIntent().getParcelableArrayListExtra("matrimonio");
         RvMatrimonio=(RecyclerView)findViewById(R.id.RvMatrimonio);
-        setTitle("Casados");
+        setTitle("Resultados de Casados");
         RvMatrimonio.setLayoutManager(new LinearLayoutManager(this));
         if(matrimonios.size()==0){
             return;

@@ -164,7 +164,7 @@ public class ConsultarPagoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 paramfecha[0]=input_fecha.getText().toString().trim();
-                parammovi[0]=numMovimiento.getText().toString().trim();
+                parammovi[0]=hacer.modificarMovimientos(numMovimiento.getText().toString().trim());
                 paramcaja[0]=tvCajeroCC.getText().toString().trim();
                 if(paramfecha[0].isEmpty()){
                     Toast.makeText(getActivity(), "Ingresa una fecha", Toast.LENGTH_SHORT).show();
@@ -215,7 +215,7 @@ public class ConsultarPagoFragment extends Fragment {
         static final String URL= "http://apps2.munihuacho.gob.pe:9090/ConsultaDePagoWS/ConsultarPagos?WSDL";
         static final String NAMESPACE="http://consultar/";
         static final String SOAP_ACTION=NAMESPACE+METHODNAME;
-
+        Intent intent =new Intent();
         //*Datos*//
         Caja caja=new Caja();
         String nombreCompleto;
@@ -277,12 +277,9 @@ public class ConsultarPagoFragment extends Fragment {
                 Toast.makeText(getActivity(), notFoundMessage, Toast.LENGTH_SHORT).show();
             }else{
                 super.onPostExecute(children);
-                Intent intent =new Intent(getActivity(),RegistroCivilActivity.class);
+                intent.putExtra("objeto",caja);
                 intent.putExtra("usuario",caja.getUsuario());
                 intent.putExtra("libro",caja.getLibro());
-                intent.putExtra("nombres",caja.getNombres());
-                intent.putExtra("materno",caja.getMaterno());
-                intent.putExtra("paterno",caja.getPaterno());
                 intent.putExtra("folio",caja.getFolio());
                 intent.putExtra("añore",caja.getAñore());
                 intent.putExtra("importe",caja.getImporte());
@@ -291,6 +288,7 @@ public class ConsultarPagoFragment extends Fragment {
                 intent.putExtra("total",caja.getTotal());
                 intent.putExtra("tipo",caja.getTipo());
                 intent.putExtra("nombrecompleto",nombreCompleto);
+                intent.setClass(getContext(),RegistroCivilActivity.class);
                 startActivity(intent);
             }
         }
@@ -402,9 +400,6 @@ public class ConsultarPagoFragment extends Fragment {
                if (METHODNAME.equals("ConsultarCajaCentralCc")) {
                    super.onPostExecute(children);
                    //handle caja central cc intent
-                   if(!cajaCentralCc.getTributo().equals(null)){
-                       return;
-                   }
                    Intent intent = new Intent(getActivity(), CcCtaCteActivity.class);
                    intent.putExtra("tributo", cajaCentralCc.getTributo());
                    intent.putExtra(contribuyente, cajaCentralCc.getContribuyente());
@@ -422,7 +417,6 @@ public class ConsultarPagoFragment extends Fragment {
                    startActivity(intent);
                }
                 if (METHODNAME.equals("ConsultarCajaCentral")) {
-
                     if(listaCajaCentral.size()!=0){
                         super.onPostExecute(children);
                    Intent intent = new Intent(getActivity(), CcCtaAhorroActivity.class);

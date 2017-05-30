@@ -24,7 +24,7 @@ public class NacimientoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nacimiento);
-        setTitle("Nacimientos");
+        setTitle("Resultado de Nacimientos");
         nacimientos=getIntent().getParcelableArrayListExtra("nacimiento");
         rvNacimiento=(RecyclerView)findViewById(R.id.rvNacimiento);
         rvNacimiento.setLayoutManager(new LinearLayoutManager(this));

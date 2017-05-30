@@ -42,6 +42,19 @@ public class Caracteres {
         resultado=ceros+movimiento;
         return resultado;
     }
+    public String modificarUsuario(String usuario){
+        char[] arrayChar=usuario.toCharArray();
+        String resultado="";
+        String ceros="";
+        if(arrayChar.length<=10){
+            int cantidadDeCeros=10-usuario.length();
+            for(int i=0;i<cantidadDeCeros;i++){
+                ceros=ceros+"0";
+            }
+        }
+        resultado=ceros+usuario;
+        return resultado;
+    }
     public boolean validarFecha(String fecha){
         char[] arrayChar=fecha.toCharArray();
         for (int i=0;i<arrayChar.length;i++){

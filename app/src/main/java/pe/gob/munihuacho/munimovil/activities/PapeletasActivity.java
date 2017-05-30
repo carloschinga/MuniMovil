@@ -24,7 +24,7 @@ public class PapeletasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_papeletas);
-        setTitle("Papeletas");
+        setTitle("Resultado de Papeletas");
         papeletas=getIntent().getParcelableArrayListExtra("listapapeletas");
         RvPapeletas=(RecyclerView)findViewById(R.id.RvPapeletas);
         RvPapeletas.setLayoutManager(new LinearLayoutManager(this));

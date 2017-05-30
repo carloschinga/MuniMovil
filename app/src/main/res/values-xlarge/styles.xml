@@ -28,7 +28,7 @@
         <item name="android:textViewStyle">@style/muni.textview</item>
     </style>
     <style name="muni.textview" parent="@android:style/Widget.TextView">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">45sp</item>
     </style>
     <style name="muni.NoActionBar" parent="muni">
         <item name="windowActionBar">false</item>
@@ -115,6 +115,14 @@
         <item name="android:layout_weight">1</item>
         <item name="android:lines">1</item>
 
+    </style>
+    <style name="muni.ctacterazontv" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/blue700</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
     </style>
     <style name="muni.operacionvehiculo.txtAnswer" parent="@android:style/Widget.TextView">
         <item name="android:background">@drawable/textview_answer</item>

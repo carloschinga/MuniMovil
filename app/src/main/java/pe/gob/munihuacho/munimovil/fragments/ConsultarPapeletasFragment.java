@@ -165,10 +165,9 @@ public class ConsultarPapeletasFragment extends Fragment {
                 Toast.makeText(getActivity(), notFoundMessage, Toast.LENGTH_SHORT).show();
             }else{
                 super.onPostExecute(children);
-                if(listPapeleta.size()!=0){
                 Intent intent=new Intent(getActivity(), PapeletasActivity.class);
                 intent.putExtra("listapapeletas",listPapeleta);
-                startActivity(intent);}
+                startActivity(intent);
             }
 
 

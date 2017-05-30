@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import pe.gob.munihuacho.munimovil.R;
+import pe.gob.munihuacho.munimovil.model.Caja;
 
 public class RegistroCivilActivity extends AppCompatActivity {
     TextView tvCajeroRC;
@@ -34,12 +35,18 @@ public class RegistroCivilActivity extends AppCompatActivity {
     protected static final String REGISTROCIVIL_TOTAL = "total";
     protected static final String REGISTROCIVIL_USUARIO = "usuario";
     protected static final String REGISTROCIVIL_CAJA = "caja";
+    Caja caj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_civil);
         setTitle("Pagos en registro civil");
+
         /**DATOS**/
+        caj=getIntent().getParcelableExtra("objeto");
+        if(caj ==null){
+            return;
+        }
         String usuario=getIntent().getStringExtra("usuario");
         String libro=getIntent().getStringExtra("libro");
         String nombrecompleto=getIntent().getStringExtra("nombrecompleto");
@@ -50,6 +57,7 @@ public class RegistroCivilActivity extends AppCompatActivity {
         String cantidad= getIntent().getStringExtra("cantidad");
         String total=getIntent().getStringExtra("total");
         String tipo=getIntent().getStringExtra("tipo");
+
         /**CAMPOS**/
         tvCajeroRC=(TextView)findViewById(R.id.tvCajeroRC);
         tvFechaRC=(TextView)findViewById(R.id.tvFechaRC);
@@ -65,7 +73,7 @@ public class RegistroCivilActivity extends AppCompatActivity {
         tvCajeroRC.setText(usuario);
         tvLibRc.setText("Lib: "+libro);
         tvTipoPartidaRc.setText(tipo);
-        tvFechaRC.setText(fecha);
+        tvFechaRC.setText(caj.getFecha());
         tvFolioRC.setText("Folio: "+folio);
         tvNomYApe.setText(nombrecompleto);
         tvAnioRegistroRC.setText("Año registro: "+añore);
