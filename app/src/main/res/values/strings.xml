@@ -127,4 +127,9 @@
     <string name="codigo">Codigo</string>
     <string name="direcc">Dirección</string>
     <string name="verestadocontvs">Ver estado del contribuyente vs coactiva</string>
+    <string name="totales">Totales</string>
+    <string name="deuda">Deuda</string>
+    <string name="pagos">Pagos</string>
+    <string name="pendiente">Pendiente</string>
+    <string name="descripcion">Descripción</string>
 </resources>

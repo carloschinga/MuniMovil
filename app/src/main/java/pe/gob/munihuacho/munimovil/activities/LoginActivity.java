@@ -1,9 +1,15 @@
 package pe.gob.munihuacho.munimovil.activities;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         input_user=(EditText)findViewById(R.id.input_user);
         input_password=(EditText)findViewById(R.id.input_password);
         button_ingresar_sistema=(Button)findViewById(R.id.button_ingresar_sistema);
@@ -89,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             super.onPostExecute(children);
             //verify data and then intent to activity result
             //if login message is exito do intent
+            if(notEthernetConnection.equals("")){
             if(loginMessage.equals("Exito")){
                 //Intent
                 Intent intent=new Intent(getApplicationContext(),CuentaCorrienteActivity.class);
@@ -98,6 +106,9 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }else if(loginMessage.equals("La contraseña no es correcta.")){
                 Toast.makeText(LoginActivity.this, "Contraseña incorrecta.", Toast.LENGTH_SHORT).show();
+            }
+            }else{
+                Toast.makeText(LoginActivity.this, notEthernetConnection, Toast.LENGTH_SHORT).show();
             }
 
         }
