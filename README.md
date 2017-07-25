@@ -13,8 +13,3 @@
  Horarios de Atención:   
  Lunes - Viernes (8.05 am - 4.45 pm)   
 Sábados(Solo pagos de tributos) - 9.00 am -1.00 pm  
-
-##
-Soy el unico responsable del desarrollo y mantenimiento de la aplicación 
- 
- 
