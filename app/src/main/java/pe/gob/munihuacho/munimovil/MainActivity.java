@@ -21,8 +21,10 @@ import android.widget.ImageView;
 
 import pe.gob.munihuacho.munimovil.activities.LoginActivity;
 import pe.gob.munihuacho.munimovil.activities.SisgedoActivity;
+import pe.gob.munihuacho.munimovil.fragments.AlertaHuachoFragment;
 import pe.gob.munihuacho.munimovil.fragments.ConsultarPagoFragment;
 import pe.gob.munihuacho.munimovil.fragments.ConsultarPapeletasFragment;
+import pe.gob.munihuacho.munimovil.fragments.ContactanosFragment;
 import pe.gob.munihuacho.munimovil.fragments.HomeFragment;
 import pe.gob.munihuacho.munimovil.fragments.OperacionVehiculoFragment;
 import pe.gob.munihuacho.munimovil.fragments.RegistroEstadoCivilFragment;
@@ -127,6 +129,13 @@ ImageView navtitle;
         }else if(id==R.id.nav_tramites_documentarios){
             Intent intent=new Intent(this, SisgedoActivity.class);
             startActivity(intent);
+        }else if(id==R.id.nav_alerta_opcion){
+            newFragment= AlertaHuachoFragment.newInstance(String.valueOf(id),item.getTitle().toString());
+            setTitle(item.getTitle());
+        }
+        else if(id==R.id.nav_contactanos){
+            newFragment= ContactanosFragment.newInstance(String.valueOf(id),item.getTitle().toString());
+            setTitle(item.getTitle());
         }
         if(newFragment!=null){
 
