@@ -55,6 +55,9 @@ public class Caracteres {
         resultado=ceros+usuario;
         return resultado;
     }
+    public String configurarPlaca(String placa){
+        return placa.toUpperCase();
+    }
     public boolean validarFecha(String fecha){
         char[] arrayChar=fecha.toCharArray();
         for (int i=0;i<arrayChar.length;i++){

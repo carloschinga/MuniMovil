@@ -24,7 +24,7 @@
     <string name="usuario">Usuario</string>
     <string name="contra">Contraseña</string>
     <string name="textoBienvenido">
-       Vecinos de esta querida tierra llena de historia, cultura y tradiciones, permítanme darles la bienvenidas a nombre mío y del Cuerpo Edil, elegidos democráticamente para el periodo 2015 – 2018, quienes hemos asumido con gran responsabilidad el compromiso de ejercer un gobierno comunal para todos.
+       lghjjghgjgjgjgjgjg ghjgh
     </string>
     <string name="action_home">Inicio</string>
     <string name="action_back" />
@@ -70,7 +70,7 @@
     <string name="Concepto">Concepto</string>
     <string name="home">Inicio</string>
     <string name="ingrNombre">Ingrese Nombre...</string>
-    <string name="regyestcivil">Consulta de registro y estado civil</string>
+    <string name="regyestcivil">Actas de Registro Civil</string>
     <string name="apepaterno">Apellido Paterno</string>
     <string name="apematerno">Apellido Materno</string>
     <string name="nombres">Nombres</string>
@@ -91,8 +91,8 @@
     <string name="serie">Serie</string>
     <string name="fechaEmision">Fecha de Emisión</string>
     <string name="fechaCaducidad">Fecha de Caducidad</string>
-    <string name="operVehiculo">Consulta de operación vehicular</string>
-    <string name="papeletas">Consulta de papeletas</string>
+    <string name="operVehiculo">Tarjeta unica de circulación</string>
+    <string name="papeletas">Papeletas de transito</string>
     <string name="ingPapeletas">Ingrese el DNI o N° de papeleta</string>
     <string name="ingOperacionVehiculo">Ingrese operación vehiculo</string>
     <string name="ingresedato">Ingrese dato...</string>
@@ -132,4 +132,6 @@
     <string name="pagos">Pagos</string>
     <string name="pendiente">Pendiente</string>
     <string name="descripcion">Descripción</string>
+    <string name="alertahuacho">Alerta Huacho</string>
+    <string name="contactos">Contactanos</string>
 </resources>
